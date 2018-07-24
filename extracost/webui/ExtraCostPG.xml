@@ -1,0 +1,204 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="PageLayoutRN" amDefName="xxgam.oracle.apps.xbol.tm.extracost.server.ExtraCost" windowTitle="Costos Adicionales" title="Costos Adicionales" controllerClass="xxgam.oracle.apps.xbol.tm.extracost.webui.ExtraCostCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="MainRN">
+               <ui:contents>
+                  <oa:messageLovInput id="Proveedor" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/PrividersRN" prompt="Proveedor">
+                     <lovMappings>
+                        <lovMap id="lovMap1" lovItem="Code" resultTo="Proveedor" criteriaFrom="Proveedor"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageLovInput id="Prioridad" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/PriorityRN" prompt="Prioridad">
+                     <lovMappings>
+                        <lovMap id="lovMap2" lovItem="Code" resultTo="Prioridad" criteriaFrom="Prioridad"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageTextInput id="CreationDate" queryable="false" dataType="DATE" prompt="Fecha de creación" tipType="dateFormat"/>
+                  <oa:messageLovInput id="Document" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/DocumentRN" prompt="Documento">
+                     <lovMappings>
+                        <lovMap id="lovMap3" lovItem="Code" resultTo="Document" criteriaFrom="Document"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageLovInput id="Document1" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/DocumentRN" prompt="Número de Documento">
+                     <lovMappings>
+                        <lovMap id="lovMap4" lovItem="IdDocuments" resultTo="Document1" criteriaFrom="Document1"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+               </ui:contents>
+            </oa:messageComponentLayout>
+            <oa:pageButtonBar id="region1">
+               <ui:contents>
+                  <oa:submitButton id="BuscarBtn" text="Buscar" prompt="Buscar"/>
+               </ui:contents>
+            </oa:pageButtonBar>
+            <oa:table id="ExtraCostVO1" width="100%" rendered="false">
+               <ui:contents>
+                  <oa:messageStyledText id="IdFreight" dataType="NUMBER" prompt="IdFreight" viewName="ExtraCostVO1" viewAttr="IdFreight" rendered="false"/>
+                  <oa:messageStyledText id="IdStretch" dataType="NUMBER" prompt="IdStretch" viewName="ExtraCostVO1" viewAttr="IdStretch" rendered="false"/>
+                  <oa:messageStyledText id="IdFreightChar" dataType="VARCHAR2" prompt="IdFreightChar" viewName="ExtraCostVO1" viewAttr="IdFreightChar" maximumLength="200"/>
+                  <oa:messageStyledText id="FreightJob" dataType="VARCHAR2" prompt="FreightJob" viewName="ExtraCostVO1" viewAttr="FreightJob" maximumLength="200"/>
+                  <oa:messageStyledText id="Uo" dataType="VARCHAR2" prompt="Uo" viewName="ExtraCostVO1" viewAttr="Uo" maximumLength="2"/>
+                  <oa:messageStyledText id="Classification" dataType="VARCHAR2" prompt="Classification" viewName="ExtraCostVO1" viewAttr="Classification" maximumLength="200"/>
+                  <oa:messageStyledText id="Origin" dataType="VARCHAR2" prompt="Origin" viewName="ExtraCostVO1" viewAttr="Origin" maximumLength="200"/>
+                  <oa:messageStyledText id="ZoneDesc" dataType="VARCHAR2" prompt="ZoneDesc" viewName="ExtraCostVO1" viewAttr="ZoneDesc" maximumLength="200"/>
+                  <oa:messageStyledText id="DistributionCode" dataType="VARCHAR2" prompt="DistributionCode" viewName="ExtraCostVO1" viewAttr="DistributionCode" maximumLength="200" rendered="true"/>
+                  <oa:messageStyledText id="Destination" dataType="VARCHAR2" prompt="Destination" viewName="ExtraCostVO1" viewAttr="Destination" maximumLength="200"/>
+                  <oa:messageStyledText id="Media" dataType="VARCHAR2" prompt="Media" viewName="ExtraCostVO1" viewAttr="Media" maximumLength="200"/>
+                  <oa:messageStyledText id="ModeCode" dataType="VARCHAR2" prompt="ModeCode" viewName="ExtraCostVO1" viewAttr="ModeCode" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="IdRequest" dataType="NUMBER" prompt="IdRequest" viewName="ExtraCostVO1" viewAttr="IdRequest"/>
+                  <oa:messageStyledText id="UseRate" dataType="VARCHAR2" prompt="UseRate" viewName="ExtraCostVO1" viewAttr="UseRate" maximumLength="200"/>
+                  <oa:messageStyledText id="IdStatus" dataType="NUMBER" prompt="IdStatus" viewName="ExtraCostVO1" viewAttr="IdStatus" rendered="false"/>
+                  <oa:messageStyledText id="Status" dataType="VARCHAR2" prompt="Status" viewName="ExtraCostVO1" viewAttr="Status" maximumLength="200"/>
+                  <oa:messageStyledText id="IdClassification" dataType="NUMBER" prompt="IdClassification" viewName="ExtraCostVO1" viewAttr="IdClassification" rendered="false"/>
+                  <oa:messageStyledText id="IdOrigin" dataType="NUMBER" prompt="IdOrigin" viewName="ExtraCostVO1" viewAttr="IdOrigin" rendered="false"/>
+                  <oa:messageStyledText id="IdZone" dataType="NUMBER" prompt="IdZone" viewName="ExtraCostVO1" viewAttr="IdZone" rendered="false"/>
+                  <oa:messageStyledText id="IdDistribution" dataType="NUMBER" prompt="IdDistribution" viewName="ExtraCostVO1" viewAttr="IdDistribution" rendered="false"/>
+                  <oa:messageStyledText id="Distribution" dataType="VARCHAR2" prompt="Distribution" viewName="ExtraCostVO1" viewAttr="Distribution" maximumLength="200"/>
+                  <oa:messageStyledText id="IdDestination" dataType="NUMBER" prompt="IdDestination" viewName="ExtraCostVO1" viewAttr="IdDestination" rendered="false"/>
+                  <oa:messageStyledText id="IdMedia" dataType="NUMBER" prompt="IdMedia" viewName="ExtraCostVO1" viewAttr="IdMedia" rendered="false"/>
+                  <oa:messageStyledText id="IdMode" dataType="NUMBER" prompt="IdMode" viewName="ExtraCostVO1" viewAttr="IdMode" rendered="false"/>
+                  <oa:messageStyledText id="ModeDesc" dataType="VARCHAR2" prompt="ModeDesc" viewName="ExtraCostVO1" viewAttr="ModeDesc" maximumLength="200"/>
+                  <oa:messageStyledText id="Provider" dataType="VARCHAR2" prompt="Provider" viewName="ExtraCostVO1" viewAttr="Provider" maximumLength="200"/>
+                  <oa:messageStyledText id="IdProvider" dataType="NUMBER" prompt="IdProvider" viewName="ExtraCostVO1" viewAttr="IdProvider" rendered="false"/>
+                  <oa:messageStyledText id="Etd" dataType="DATE" prompt="Etd" viewName="ExtraCostVO1" viewAttr="Etd" rendered="false"/>
+                  <oa:messageStyledText id="EtdHour" dataType="VARCHAR2" prompt="EtdHour" viewName="ExtraCostVO1" viewAttr="EtdHour" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Eta" dataType="DATE" prompt="Eta" viewName="ExtraCostVO1" viewAttr="Eta" rendered="false"/>
+                  <oa:messageStyledText id="EtaHour" dataType="VARCHAR2" prompt="EtaHour" viewName="ExtraCostVO1" viewAttr="EtaHour" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="ArrivalDate" dataType="DATE" prompt="ArrivalDate" viewName="ExtraCostVO1" viewAttr="ArrivalDate" rendered="false"/>
+                  <oa:messageStyledText id="ArrivalTime" dataType="VARCHAR2" prompt="ArrivalTime" viewName="ExtraCostVO1" viewAttr="ArrivalTime" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="AwbBol" dataType="VARCHAR2" prompt="AwbBol" viewName="ExtraCostVO1" viewAttr="AwbBol" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Flight" dataType="VARCHAR2" prompt="Flight" viewName="ExtraCostVO1" viewAttr="Flight" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Pediment" dataType="VARCHAR2" prompt="Pediment" viewName="ExtraCostVO1" viewAttr="Pediment" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="MultipleDeliveriesFlag" dataType="VARCHAR2" prompt="MultipleDeliveriesFlag" viewName="ExtraCostVO1" viewAttr="MultipleDeliveriesFlag" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="NumDeliveries" dataType="NUMBER" prompt="NumDeliveries" viewName="ExtraCostVO1" viewAttr="NumDeliveries" rendered="false"/>
+                  <oa:messageStyledText id="Document11" dataType="VARCHAR2" prompt="Document1" viewName="ExtraCostVO1" viewAttr="Document1" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Document2" dataType="VARCHAR2" prompt="Document2" viewName="ExtraCostVO1" viewAttr="Document2" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Document3" dataType="VARCHAR2" prompt="Document3" viewName="ExtraCostVO1" viewAttr="Document3" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Document4" dataType="VARCHAR2" prompt="Document4" viewName="ExtraCostVO1" viewAttr="Document4" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute1" dataType="VARCHAR2" prompt="Attribute1" viewName="ExtraCostVO1" viewAttr="Attribute1" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute2" dataType="VARCHAR2" prompt="Attribute2" viewName="ExtraCostVO1" viewAttr="Attribute2" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute3" dataType="VARCHAR2" prompt="Attribute3" viewName="ExtraCostVO1" viewAttr="Attribute3" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute4" dataType="VARCHAR2" prompt="Attribute4" viewName="ExtraCostVO1" viewAttr="Attribute4" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute5" dataType="VARCHAR2" prompt="Attribute5" viewName="ExtraCostVO1" viewAttr="Attribute5" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute6" dataType="VARCHAR2" prompt="Attribute6" viewName="ExtraCostVO1" viewAttr="Attribute6" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute7" dataType="VARCHAR2" prompt="Attribute7" viewName="ExtraCostVO1" viewAttr="Attribute7" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute8" dataType="VARCHAR2" prompt="Attribute8" viewName="ExtraCostVO1" viewAttr="Attribute8" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute9" dataType="VARCHAR2" prompt="Attribute9" viewName="ExtraCostVO1" viewAttr="Attribute9" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="Attribute10" dataType="VARCHAR2" prompt="Attribute10" viewName="ExtraCostVO1" viewAttr="Attribute10" maximumLength="200" rendered="false"/>
+                  <oa:messageStyledText id="LastUpdateDate" dataType="DATE" prompt="LastUpdateDate" viewName="ExtraCostVO1" viewAttr="LastUpdateDate" rendered="false"/>
+                  <oa:messageStyledText id="LastUpdatedBy" dataType="NUMBER" prompt="LastUpdatedBy" viewName="ExtraCostVO1" viewAttr="LastUpdatedBy" rendered="false"/>
+                  <oa:messageStyledText id="CreationDate1" dataType="DATE" prompt="CreationDate" viewName="ExtraCostVO1" viewAttr="CreationDate" rendered="false"/>
+                  <oa:messageStyledText id="CreatedBy" dataType="NUMBER" prompt="CreatedBy" viewName="ExtraCostVO1" viewAttr="CreatedBy" rendered="false"/>
+                  <oa:messageStyledText id="LastUpdateLogin" dataType="NUMBER" prompt="LastUpdateLogin" viewName="ExtraCostVO1" viewAttr="LastUpdateLogin" rendered="false"/>
+                  <oa:messageStyledText id="InvoiceStatus" dataType="VARCHAR2" prompt="InvoiceStatus" viewName="ExtraCostVO1" viewAttr="InvoiceStatus" maximumLength="255" rendered="false"/>
+                  <oa:image id="item1" source="updateicon_enabled.gif">
+                     <ui:primaryClientAction>
+                        <ui:fireAction event="updateEvent"/>
+                     </ui:primaryClientAction>
+                  </oa:image>
+               </ui:contents>
+            </oa:table>
+            <oa:advancedTable id="MainTableRN" viewName="MasterVO1" detailViewAttr="DetailFlag" childViewAttrName="IdFreightChar" viewLinkName="MasterDetailVL1" width="100%">
+               <ui:contents>
+                  <oa:column id="column1">
+                     <ui:columnHeader>
+                        <oa:sortableHeader id="sortableHeader1" prompt="Flete"/>
+                     </ui:columnHeader>
+                     <ui:contents>
+                        <oa:messageStyledText id="item2" viewAttr="IdFreightChar" prompt=""/>
+                     </ui:contents>
+                  </oa:column>
+                  <oa:column id="column2">
+                     <ui:columnHeader>
+                        <oa:sortableHeader id="sortableHeader2" prompt="Prioridad"/>
+                     </ui:columnHeader>
+                     <ui:contents>
+                        <oa:messageStyledText id="item3" viewAttr="Priority" prompt="Prioridad"/>
+                     </ui:contents>
+                  </oa:column>
+               </ui:contents>
+               <ui:detail>
+                  <oa:header id="DetailRN" text="Costos adicionales">
+                     <ui:contents>
+                        <oa:advancedTable id="DetailTableRN" viewName="DetailVO2" viewLinkName="MasterDetailVL1" width="100%">
+                           <ui:contents>
+                              <oa:column id="column3">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader3" prompt="Flete"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:messageStyledText id="item4" viewName="DetailVO2" viewAttr="IdFreightChar" queryable="true" maximumLength="255" prompt="Flete"/>
+                                 </ui:contents>
+                              </oa:column>
+                              <oa:column id="column4">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader4" prompt="Tipo de costo extra"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:messageStyledText id="item5" viewName="DetailVO2" viewAttr="TypeExtraCost" maximumLength="255" queryable="true" prompt="Tipo de costo extra" dataType="VARCHAR2"/>
+                                 </ui:contents>
+                              </oa:column>
+                              <oa:column id="column5">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader5" prompt="Costo extra"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:messageStyledText id="item7" serverUnvalidated="false" queryable="true" viewName="DetailVO2" viewAttr="Rate" prompt="Costo extra"/>
+                                 </ui:contents>
+                              </oa:column>
+                              <oa:column id="column6">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader6" prompt="Impuestos"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:messageStyledText id="item8" viewName="DetailVO2" viewAttr="TaxRate"/>
+                                 </ui:contents>
+                              </oa:column>
+                              <oa:column id="column7">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader7" prompt="Borrar"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:image id="item9" source="deleteicon_enabled.gif">
+                                       <ui:primaryClientAction>
+                                          <ui:fireAction event="deleteEvent">
+                                             <ui:parameters>
+                                                <ui:parameter key="pIdExtraCost" value="${oa.DetailVO2.IdExtraCost}"/>
+                                             </ui:parameters>
+                                          </ui:fireAction>
+                                       </ui:primaryClientAction>
+                                    </oa:image>
+                                 </ui:contents>
+                              </oa:column>
+                              <oa:column id="column8">
+                                 <ui:columnHeader>
+                                    <oa:sortableHeader id="sortableHeader8" prompt="Actualizar"/>
+                                 </ui:columnHeader>
+                                 <ui:contents>
+                                    <oa:image id="item10" source="updateicon_enabled.gif">
+                                       <ui:primaryClientAction>
+                                          <ui:fireAction event="updateEvent">
+                                             <ui:parameters>
+                                                <ui:parameter key="pIdExtraCost" value="${oa.DetailVO2.IdExtraCost}"/>
+                                             </ui:parameters>
+                                          </ui:fireAction>
+                                       </ui:primaryClientAction>
+                                    </oa:image>
+                                 </ui:contents>
+                              </oa:column>
+                           </ui:contents>
+                        </oa:advancedTable>
+                        <oa:image id="item6" source="adddocumenttolist_enabled.gif"/>
+                     </ui:contents>
+                  </oa:header>
+               </ui:detail>
+            </oa:advancedTable>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oa:listOfValues version="10.1.3_1312" xml:lang="en-US" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:ui="http://xmlns.oracle.com/uix/ui" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$" scope="/" amDefName="xxgam.oracle.apps.xbol.tm.lov.server.LovAM">
+   <ui:contents>
+      <oa:table name="DocumentRN" id="DocumentVO1">
+         <ui:contents>
+            <oa:messageStyledText id="IdDocuments" dataType="NUMBER" prompt="IdDocuments" viewName="DocumentVO1" viewAttr="IdDocuments" queryable="true"/>
+            <oa:messageStyledText id="DateFrom" dataType="DATE" prompt="DateFrom" viewName="DocumentVO1" viewAttr="DateFrom" queryable="true"/>
+            <oa:messageStyledText id="DateTo" dataType="DATE" prompt="DateTo" viewName="DocumentVO1" viewAttr="DateTo" queryable="true"/>
+            <oa:messageStyledText id="Code" dataType="VARCHAR2" prompt="Code" viewName="DocumentVO1" viewAttr="Code" maximumLength="255" queryable="true"/>
+            <oa:messageStyledText id="DocumentName" dataType="VARCHAR2" prompt="DocumentName" viewName="DocumentVO1" viewAttr="DocumentName" maximumLength="255" queryable="true"/>
+            <oa:messageStyledText id="SystemName" dataType="VARCHAR2" prompt="SystemName" viewName="DocumentVO1" viewAttr="SystemName" maximumLength="255" queryable="true"/>
+            <oa:messageStyledText id="PhysicalDocument" dataType="VARCHAR2" prompt="PhysicalDocument" viewName="DocumentVO1" viewAttr="PhysicalDocument" maximumLength="255" queryable="true"/>
+         </ui:contents>
+      </oa:table>
+   </ui:contents>
+</oa:listOfValues>

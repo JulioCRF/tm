@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="ExtraCost"
+   ComponentClass="xxgam.oracle.apps.xbol.tm.extracost.server.ExtraCostImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="ExtraCostVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.ExtraCostVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="MasterVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.MasterVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DetailVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.DetailVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DetailVO2"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.DetailVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TotalsVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.TotalsVO" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="MasterDetailVL1"
+      ViewLinkObjectName="xxgam.oracle.apps.xbol.tm.extracost.server.MasterDetailVL"
+      SrcViewUsageName="xxgam.oracle.apps.xbol.tm.extracost.server.ExtraCost.MasterVO1"
+      DstViewUsageName="xxgam.oracle.apps.xbol.tm.extracost.server.ExtraCost.DetailVO1" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="10.1.3.41.57" />
+      </DesignTime>
+   </ViewLinkUsage>
+</AppModule>

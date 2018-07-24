@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="xxgam.oracle.apps.xbol.tm.request.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="AreaVO"
+      FullName="xxgam.oracle.apps.xbol.tm.request.server.AreaVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="PruebaVO"
+      FullName="xxgam.oracle.apps.xbol.tm.request.server.PruebaVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="RequestAM"
+      FullName="xxgam.oracle.apps.xbol.tm.request.server.RequestAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="StatusVO"
+      FullName="xxgam.oracle.apps.xbol.tm.request.server.StatusVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="UnitOperVO"
+      FullName="xxgam.oracle.apps.xbol.tm.request.server.UnitOperVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

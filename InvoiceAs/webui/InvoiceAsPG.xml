@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="PageLayoutRN" scope="/" amDefName="xxgam.oracle.apps.xbol.tm.InvoiceAs.server.InvoiceAsAM" windowTitle="Asociación de facturas" title="Asociación de facturas" controllerClass="xxgam.oracle.apps.xbol.tm.InvoiceAs.webui.InvoiceAsCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="SearchRN">
+               <ui:contents>
+                  <oa:messageLovInput id="ProviderN" prompt="Número de proveedor" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/PrividersRN">
+                     <lovMappings>
+                        <lovMap id="ProviderN1MAP" lovItem="Code" resultTo="ProviderN" criteriaFrom="ProviderN"/>
+                        <lovMap id="Provider1MAP" lovItem="Description" resultTo="Provider" criteriaFrom="Provider"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageLovInput id="Provider" externalListOfValues="/xxgam/oracle/apps/xbol/tm/lov/webui/PrividersRN" prompt="Proveedor">
+                     <lovMappings>
+                        <lovMap id="ProviderN2MAP" lovItem="Code" resultTo="ProviderN" criteriaFrom="ProviderN"/>
+                        <lovMap id="Provider2MAP" lovItem="Description" resultTo="Provider" criteriaFrom="Provider"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageChoice id="currency" pickListValAttr="Currency" prompt="Moneda" queryable="true" pickListViewDef="xxgam.oracle.apps.xbol.tm.poplist.server.CurrencyVO" pickListViewName="Currency" pickListDispAttr="Currency"/>
+               </ui:contents>
+            </oa:messageComponentLayout>
+            <oa:spacer id="item1" height="5"/>
+            <oa:messageComponentLayout id="InvoiceRN">
+               <ui:contents>
+                  <oa:messageTextInput id="Invoice" prompt="Factura"/>
+               </ui:contents>
+            </oa:messageComponentLayout>
+            <oa:spacer id="spacerIT" height="5"/>
+            <oa:table id="detailVO1" text="Detalles" width="100%">
+               <ui:contents>
+                  <oa:messageStyledText id="FolioFlete" dataType="VARCHAR2" prompt="Flete" viewName="DetailVO1" viewAttr="FolioFlete"/>
+                  <oa:messageStyledText id="Transport" dataType="VARCHAR2" prompt="Transporte" viewName="DetailVO1" viewAttr="Transport" maximumLength="200"/>
+                  <oa:messageStyledText id="Foliosintramo" dataType="NUMBER" prompt="Folio sin tramo" viewName="DetailVO1" viewAttr="Foliosintramo"/>
+                  <oa:messageStyledText id="Tramo" dataType="NUMBER" prompt="Tramo" viewName="DetailVO1" viewAttr="Tramo"/>
+                  <oa:messageStyledText id="invoiceStatus" viewName="DetailVO1" viewAttr="InvoiceStatus" prompt="Estado" maximumLength="255"/>
+               </ui:contents>
+               <ui:tableSelection>
+                  <oa:multipleSelection id="multipleSelection1" viewName="DetailVO1" viewAttr="CheckBox"/>
+               </ui:tableSelection>
+            </oa:table>
+            <oa:pageButtonBar id="region2">
+               <ui:contents>
+                  <oa:submitButton id="Go" text="Buscar" prompt="Buscar"/>
+                  <oa:submitButton id="Conciliar" text="Conciliar" prompt="Conciliar"/>
+               </ui:contents>
+            </oa:pageButtonBar>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="RequestAM"
+   ComponentClass="xxgam.oracle.apps.xbol.tm.request.server.RequestAMImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="UnitOperVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.request.server.UnitOperVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="StatusVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.request.server.StatusVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="AreaVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.request.server.AreaVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="PruebaVO1"
+      ViewObjectName="xxgam.oracle.apps.xbol.tm.request.server.PruebaVO" >
+   </ViewUsage>
+</AppModule>

@@ -1,0 +1,275 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="PageLayoutRN" amDefName="xxgam.oracle.apps.xbol.tm.request.server.RequestAM" windowTitle="Request Page" title="Request Page" scope="/" controllerClass="xxgam.oracle.apps.xbol.tm.request.webui.RequestCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:defaultDoubleColumn id="HeaderRN" text="Aeromexico Transportation Management System" styleClass="OraDarkHeaderSub">
+               <ui:contents>
+                  <oa:messageStyledText id="Mensaje" prompt="Solicitud de servicios de transporte" shortDesc="Solicitud de servicios de transporte" styleClass="OraLightHeader"/>
+                  <oa:messageTextInput id="Folio" prompt="Folio" shortDesc="Folio" readOnly="true"/>
+                  <oa:messageStyledText id="Espacio"/>
+                  <oa:messageLovInput id="Status" prompt="Status" shortDesc="Status" translatableDefaultValue="Abierto" externalListOfValues="/xxgam/oracle/apps/xbol/tm/request/lov/webui/StatusRN">
+                     <lovMappings>
+                        <lovMap id="lovMap3" lovItem="Meaning" resultTo="Status" criteriaFrom="Status"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+               </ui:contents>
+            </oa:defaultDoubleColumn>
+            <oa:header id="GeneralRN" text="Datos Generales">
+               <ui:contents>
+                  <oa:messageComponentLayout id="General1RN" rows="2" columns="4">
+                     <ui:contents>
+                        <oa:messageLovInput id="Compania" prompt="Compañia" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/request/lov/webui/UnitOperRN" shortDesc="Compania" translatableDefaultValue="02">
+                           <lovMappings>
+                              <lovMap id="lovMap4" lovItem="Meaning" resultTo="Compania" criteriaFrom="Compania"/>
+                              <lovMap id="lovMap5" lovItem="Description" resultTo="CompaniaDes"/>
+                           </lovMappings>
+                        </oa:messageLovInput>
+                        <oa:messageTextInput id="Usuario" prompt="Usuario" shortDesc="Nombre de Usuario"/>
+                        <oa:messageStyledText id="CompaniaDes" prompt=""/>
+                        <oa:messageStyledText id="item4" prompt=""/>
+                        <oa:messageLovInput id="Area" prompt="Área Solicitante" queryable="true" externalListOfValues="/xxgam/oracle/apps/xbol/tm/request/lov/webui/RequestAreaRN">
+                           <lovMappings>
+                              <lovMap id="lovMap6" lovItem="LookupCode" resultTo="Area" criteriaFrom="Area"/>
+                              <lovMap id="lovMap7" lovItem="Description" resultTo="AreaDes" criteriaFrom="AreaDes"/>
+                           </lovMappings>
+                        </oa:messageLovInput>
+                        <oa:messageTextInput id="Telefono" prompt="Telefono"/>
+                        <oa:messageStyledText id="AreaDes" prompt=""/>
+                     </ui:contents>
+                  </oa:messageComponentLayout>
+               </ui:contents>
+            </oa:header>
+            <oa:defaultDoubleColumn id="General3RN" text="Datos Generales" rendered="false">
+               <ui:contents>
+                  <oa:messageLovInput id="Compania1" prompt="Compañia" shortDesc="Compañia" queryable="false" externalListOfValues="/xxgam/oracle/apps/xbol/tm/request/lov/webui/UnitOperRN" translatableDefaultValue="02">
+                     <lovMappings>
+                        <lovMap id="lovMap2" lovItem="Description" resultTo="Compania1" criteriaFrom="Compania1"/>
+                     </lovMappings>
+                  </oa:messageLovInput>
+                  <oa:messageTextInput id="Area1" prompt="Area" shortDesc="Area"/>
+                  <oa:messageTextInput id="Usuario1" prompt="Usuario" shortDesc="Usuario"/>
+                  <oa:messageTextInput id="Telefono1" prompt="Teléfono" shortDesc="Teléfono"/>
+               </ui:contents>
+            </oa:defaultDoubleColumn>
+            <oa:header id="ShipperDestinationRN" text="Datos del embarcador" rendered="false">
+               <ui:contents>
+                  <oa:tableLayout id="ShipperDestination1RN" hAlign="center">
+                     <ui:contents>
+                        <oa:rowLayout id="ShipperRow">
+                           <ui:contents>
+                              <oa:cellFormat id="ShiperCell" hAlign="left">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="Embarcador" prompt="Embarcador" shortDesc="Embarcador"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="ShipperDesCell" hAlign="left">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="EmbarcadorDes" prompt=""/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="Espacio1">
+                                 <ui:contents>
+                                    <oa:staticStyledText id="item5"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="DestinationCell" hAlign="right">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="Destination" prompt="Embarcador"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="DestinationDesCell" hAlign="right">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="DestinationDes"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                           </ui:contents>
+                        </oa:rowLayout>
+                     </ui:contents>
+                  </oa:tableLayout>
+               </ui:contents>
+            </oa:header>
+            <oa:header id="ShipperdestinationRN1" text="Embarcador - Destinatario">
+               <ui:contents>
+                  <oa:tableLayout id="region2" hAlign="center">
+                     <ui:contents>
+                        <oa:rowLayout id="region3">
+                           <ui:contents>
+                              <oa:cellFormat id="region4" width="40%" vAlign="top" hAlign="left">
+                                 <ui:contents>
+                                    <oa:defaultDoubleColumn id="region6" text="Datos del embarcador">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="Shipper" prompt="Embarcador"/>
+                                          <oa:messageTextInput id="ShipperDes" prompt=""/>
+                                          <oa:messageTextInput id="Country" prompt="País"/>
+                                          <oa:messageTextInput id="CountryDes"/>
+                                          <oa:messageTextInput id="City" prompt="Ciudad"/>
+                                          <oa:messageTextInput id="CityDes"/>
+                                          <oa:messageTextInput id="Address" prompt="Dirección"/>
+                                          <oa:messageTextInput id="AddressDes"/>
+                                          <oa:messageTextInput id="Comments" prompt="Comentarios" columns="20" rows="4" rendered="false"/>
+                                          <oa:defaultSingleColumn id="region8">
+                                             <ui:contents>
+                                                <oa:messageTextInput id="item14" prompt="comentarios" columns="50" rows="4"/>
+                                             </ui:contents>
+                                          </oa:defaultSingleColumn>
+                                       </ui:contents>
+                                    </oa:defaultDoubleColumn>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="region5" width="60%" hAlign="right">
+                                 <ui:contents>
+                                    <oa:defaultDoubleColumn id="region61" text="Datos del Destinatario">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="destination" prompt="Destinatario"/>
+                                          <oa:messageTextInput id="destinationDes" prompt=""/>
+                                          <oa:messageTextInput id="Country1" prompt="País"/>
+                                          <oa:messageTextInput id="CountryDes1"/>
+                                          <oa:messageTextInput id="City1" prompt="Ciudad"/>
+                                          <oa:messageTextInput id="CityDes1"/>
+                                          <oa:messageTextInput id="Address1" prompt="Dirección"/>
+                                          <oa:messageTextInput id="AddressDes1"/>
+                                          <oa:messageTextInput id="Comments1" prompt="Comentarios" columns="20" rows="4" rendered="false"/>
+                                          <oa:defaultSingleColumn id="region81">
+                                             <ui:contents>
+                                                <oa:messageTextInput id="item141" prompt="comentarios" columns="50" rows="4"/>
+                                             </ui:contents>
+                                          </oa:defaultSingleColumn>
+                                       </ui:contents>
+                                    </oa:defaultDoubleColumn>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                           </ui:contents>
+                        </oa:rowLayout>
+                     </ui:contents>
+                  </oa:tableLayout>
+               </ui:contents>
+            </oa:header>
+            <oa:header id="MaterialDataRN" text="Datos del Material">
+               <ui:contents>
+                  <oa:tableLayout id="region21" hAlign="center">
+                     <ui:contents>
+                        <oa:rowLayout id="region31">
+                           <ui:contents>
+                              <oa:cellFormat id="region41" width="40%" vAlign="top" hAlign="left">
+                                 <ui:contents>
+                                    <oa:defaultDoubleColumn id="region62" text="Datos del material">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="Priority" prompt="Prioridad"/>
+                                          <oa:messageTextInput id="PriorityDes" prompt=""/>
+                                          <oa:messageTextInput id="Registration" prompt="Matricula:(sólo AOG)"/>
+                                          <oa:messageTextInput id="RegistrationDes"/>
+                                          <oa:messageTextInput id="MaterialType" prompt="Tipo de Material"/>
+                                          <oa:messageTextInput id="MaterialTypeDes"/>
+                                          <oa:messageStyledText id="oversized" prompt="Sobredimensionado" rendered="true"/>
+                                          <oa:messageCheckBox id="oversizedDes" rendered="true"/>
+                                          <oa:messageStyledText id="dryIce" prompt="Hielo Seco" columns="20" rows="4" rendered="true"/>
+                                          <oa:messageCheckBox id="dryIceDes"/>
+                                          <oa:messageStyledText id="DangerousMaterial" prompt="Material Peligroso"/>
+                                          <oa:messageCheckBox id="DangerousMaterialDes"/>
+                                          <oa:defaultSingleColumn id="region82" rendered="false">
+                                             <ui:contents>
+                                                <oa:messageTextInput id="item142" prompt="comentarios" columns="50" rows="4"/>
+                                             </ui:contents>
+                                          </oa:defaultSingleColumn>
+                                       </ui:contents>
+                                    </oa:defaultDoubleColumn>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="region51" width="60%" hAlign="right">
+                                 <ui:contents>
+                                    <oa:defaultDoubleColumn id="region611" text="Datos del Material">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="Shipment" prompt="Shipment"/>
+                                          <oa:messageTextInput id="ShipmentDes" prompt=""/>
+                                          <oa:messageTextInput id="DateMaterial" prompt="Fecha de material disponible" dataType="DATE"/>
+                                          <oa:messageStyledText id="DateMaterialDes" prompt="dd/mm/aaaa"/>
+                                          <oa:messageTextInput id="HourMaterial" prompt="Hora de material disponible" dataType="VARCHAR2"/>
+                                          <oa:messageStyledText id="HourMaterialDes" prompt="hh/mm"/>
+                                          <oa:messageTextInput id="DateDestination" prompt="Fecha de entrega" dataType="DATE"/>
+                                          <oa:messageStyledText id="DateDestinationDes" prompt="dd/mm/aaaa"/>
+                                          <oa:messageTextInput id="Comments11" prompt="Comentarios" columns="20" rows="4" rendered="false"/>
+                                          <oa:defaultSingleColumn id="region811" rendered="false">
+                                             <ui:contents>
+                                                <oa:messageTextInput id="item1411" prompt="comentarios" columns="50" rows="4"/>
+                                             </ui:contents>
+                                          </oa:defaultSingleColumn>
+                                       </ui:contents>
+                                    </oa:defaultDoubleColumn>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                           </ui:contents>
+                        </oa:rowLayout>
+                     </ui:contents>
+                  </oa:tableLayout>
+               </ui:contents>
+            </oa:header>
+            <oa:header id="RowDateRM" text="Fecha y Hora">
+               <ui:contents>
+                  <oa:messageComponentLayout id="DateRN" rows="1" columns="6">
+                     <ui:contents>
+                        <oa:messageTextInput id="ActivationDate" prompt="Fecha de Activación" dataType="DATE"/>
+                        <oa:messageStyledText id="ActivationDateDes" dataType="VARCHAR2" prompt="dd/mm/aaaa"/>
+                        <oa:messageTextInput id="Hours" dataType="VARCHAR2" prompt="Hora de Activación" maximumLength="5" columns="5"/>
+                        <oa:messageStyledText id="Colon" prompt=":" rendered="false"/>
+                        <oa:messageTextInput id="Minutes" maximumLength="2" columns="2" rendered="false"/>
+                        <oa:messageStyledText id="ActivationHourDes" prompt="hh/mm"/>
+                     </ui:contents>
+                  </oa:messageComponentLayout>
+               </ui:contents>
+            </oa:header>
+            <oa:header id="QuotationRN" text="Cotizaciones">
+               <ui:contents>
+                  <oa:tableLayout id="QuotationTbl" hAlign="center" rendered="false">
+                     <ui:contents>
+                        <oa:rowLayout id="QuotationHeadRow">
+                           <ui:contents>
+                              <oa:cellFormat id="ProviderHeadCell">
+                                 <ui:contents>
+                                    <oa:messageStyledText id="ProviderHead" prompt="Proveedor"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="CurrecyCell">
+                                 <ui:contents>
+                                    <oa:messageStyledText id="CurrencyHead" prompt="Currency"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                           </ui:contents>
+                        </oa:rowLayout>
+                        <oa:rowLayout id="QuotationRow">
+                           <ui:contents>
+                              <oa:cellFormat id="providerCell">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="Provider" viewName="PruebaVO1"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="CurrencyCell">
+                                 <ui:contents>
+                                    <oa:messageTextInput id="Currency"/>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                           </ui:contents>
+                        </oa:rowLayout>
+                     </ui:contents>
+                  </oa:tableLayout>
+                  <oa:table id="PruebaVO1">
+                     <ui:contents>
+                        <oa:messageTextInput id="ProviderCol" dataType="VARCHAR2" prompt="Proveedor" viewName="PruebaVO1" viewAttr="Col1" maximumLength="255"/>
+                        <oa:messageTextInput id="CurrencyCol" dataType="VARCHAR2" prompt="Moneda" viewName="PruebaVO1" viewAttr="Col2" maximumLength="255"/>
+                        <oa:messageTextInput id="QuotationAmountCol" prompt="Monto de Cotización"/>
+                        <oa:messageTextInput id="CommentaryCol" prompt="Comentario"/>
+                        <oa:messageTextInput id="QuotationDateCol" prompt="Fecha"/>
+                        <oa:image id="DeleteCol" source="deleteicon_enabled.gif" prompt="Borrar"/>
+                        <oa:image id="EmailCol" prompt="Email" source="tenderdelivery_enabled.gif"/>
+                     </ui:contents>
+                  </oa:table>
+                  <oa:submitButton id="NuevoBtn" text="Nuevo" prompt="Nuevo"/>
+               </ui:contents>
+            </oa:header>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>
