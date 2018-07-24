@@ -48,6 +48,7 @@ public class RequestCO extends OAControllerImpl
     }//fin de if(!pageContext.isFormSubmission())
     else{
         System.out.println("Debug 2");
+        System.out.println("Hola git");
     }//fin de else
   }//fin de processRequest
 
