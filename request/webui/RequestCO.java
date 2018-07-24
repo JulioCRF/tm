@@ -50,6 +50,7 @@ public class RequestCO extends OAControllerImpl
         System.out.println("Debug 2");
         System.out.println("Hola git");
         System.out.println("hola git hub");
+        System.out.println("hola otra vez");
     }//fin de else
   }//fin de processRequest
 
