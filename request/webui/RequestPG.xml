@@ -263,7 +263,7 @@
                         <oa:messageTextInput id="CommentaryCol" prompt="Comentario"/>
                         <oa:messageTextInput id="QuotationDateCol" prompt="Fecha"/>
                         <oa:image id="DeleteCol" source="deleteicon_enabled.gif" prompt="Borrar"/>
-                        <oa:image id="EmailCol" prompt="Email" source="tenderdelivery_enabled.gif"/>
+                        <oa:image id="EmailCol" prompt="Mandar Email" source="tenderdelivery_enabled.gif"/>
                      </ui:contents>
                   </oa:table>
                   <oa:submitButton id="NuevoBtn" text="Nuevo" prompt="Nuevo"/>
