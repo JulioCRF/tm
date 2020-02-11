@@ -1,4 +1,4 @@
-package xxgam.oracle.apps.xbol.tm.RatesM.InsertRate.server;
+package xxgam.oracle.apps.xbol.tm.RatesM.InsertRate.server; 
 
 import java.sql.SQLException;
 
